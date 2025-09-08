@@ -7,6 +7,8 @@ const nameBlock = document.querySelector('.name')
 const username = prompt('Enter your name:')
 nameBlock.innerHTML = `${username}`
 
+socket.emit('new user', username)
+
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
 
